@@ -1,0 +1,9 @@
+/installation
+/configuration.php
+.DS_Store
+/logs
+/cache
+/tmp
+LICENSE.txt
+README.txt
+web.config.txt
