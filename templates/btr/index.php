@@ -13,9 +13,9 @@ defined('_JEXEC') or die;
 $params = JFactory::getApplication()->getTemplate(true)->params;
 
 $app = JFactory::getApplication();
-$doc = JFactory::getDocument();
-$this->language = $doc->language;
-$this->direction = $doc->direction;
+$menu = $app->getMenu();
+
+$isHome = ($menu->getDefault() == $menu->getActive());
 
 // Detecting Active Variables
 $option   = $app->input->getCmd('option', '');
@@ -36,10 +36,10 @@ else
 
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
-$doc->addScript('templates/' .$this->template. '/js/template.js');
+$this->addScript('templates/' .$this->template. '/js/template.js');
 
 // Add Stylesheets
-$doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
+$this->addStyleSheet('templates/'.$this->template.'/css/template.css');
 
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
@@ -98,36 +98,6 @@ else
 	<?php
 	}
 	?>
-	<?php
-	// Template color
-	if ($this->params->get('templateColor'))
-	{
-	?>
-	<style type="text/css">
-		body.site
-		{
-			border-top: 3px solid <?php echo $this->params->get('templateColor');?>;
-			background-color: <?php echo $this->params->get('templateBackgroundColor');?>
-		}
-		a
-		{
-			color: <?php echo $this->params->get('templateColor');?>;
-		}
-		.navbar-inner, .nav-list > .active > a, .nav-list > .active > a:hover, .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .nav-pills > .active > a, .nav-pills > .active > a:hover,
-		.btn-primary
-		{
-			background: <?php echo $this->params->get('templateColor');?>;
-		}
-		.navbar-inner
-		{
-			-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-			box-shadow: 0 1px 3px rgba(0, 0, 0, .25), inset 0 -1px 0 rgba(0, 0, 0, .1), inset 0 30px 10px rgba(0, 0, 0, .2);
-		}
-	</style>
-	<?php
-	}
-	?>
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
@@ -140,27 +110,36 @@ else
 	. ($itemid ? ' itemid-' . $itemid : '')
 	. ($params->get('fluidContainer') ? ' fluid' : '');
 ?>">
-
-	<!-- Body -->
-	<div class="body">
-		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-			<!-- Header -->
-			<header class="header" role="banner">
-				<div class="header-inner clearfix">
-					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-						<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
-					</a>
-					<div class="header-search pull-right">
-						<jdoc:include type="modules" name="position-0" style="none" />
-					</div>
+	<!-- Header -->
+	<header class="header" role="banner">
+		<div class="container">
+			<div class="header-inner clearfix">
+				<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
+					<jdoc:include type="modules" name="logo" style="xhtml" />
+					<!--<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>-->
+				</a>
+				<div class="header-search pull-right">
+					<jdoc:include type="modules" name="position-0" style="none" />
 				</div>
-			</header>
-			<?php if ($this->countModules('position-1')) : ?>
-			<nav class="navigation" role="navigation">
+			</div>
+		</div>
+	</header>
+	<?php if ($this->countModules('position-1')) : ?>
+	<nav id="navigation" class="navbar" role="navigation">
+		<div class="container">
+			<div class="navbar-inner">
 				<jdoc:include type="modules" name="position-1" style="none" />
-			</nav>
-			<?php endif; ?>
+			</div>
+		</div>
+	</nav>
+	<?php endif; ?>
+	<div id="banner">
+		<div class="container">
 			<jdoc:include type="modules" name="banner" style="xhtml" />
+		</div>
+	</div>
+	<div id="content-container">
+		<div class="container">
 			<div class="row-fluid">
 				<?php if ($this->countModules('position-8')) : ?>
 				<!-- Begin Sidebar -->
@@ -176,6 +155,11 @@ else
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
+					<?php if ($isHome && $this->countModules('home-content')) : ?>
+					<div id="home-content" class="row-fluid">
+						<jdoc:include type="modules" name="home-content" style="xhtml" />
+					</div>
+					<?php endif; ?>
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
 				</main>
@@ -192,12 +176,18 @@ else
 	<!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-			<hr />
-			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?></a></p>
-			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+			<div class="row-fluid">
+				<jdoc:include type="modules" name="footer" style="xhtml" />
+			</div>
 		</div>
 	</footer>
+	<div id="sub-footer">
+		<div class="container">
+			<div id="sub-content" class="row-fluid">
+				<jdoc:include type="modules" name="sub-content" style="xhtml" />
+			</div>
+		</div>
+	</div>
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>

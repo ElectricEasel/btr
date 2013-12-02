@@ -29,8 +29,8 @@
 @import "../../../media/jui/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
-@import "../../../media/jui/less/navs.less";
-@import "../../../media/jui/less/navbar.less";
+@import "navs.less";
+@import "navbar.less";
 @import "../../../media/jui/less/breadcrumbs.less";
 @import "../../../media/jui/less/pagination.less";
 @import "../../../media/jui/less/pager.less";
@@ -45,12 +45,13 @@
 @import "../../../media/jui/less/labels-badges.less";
 @import "../../../media/jui/less/progress-bars.less";
 @import "../../../media/jui/less/accordion.less";
-@import "../../../media/jui/less/carousel.less";
+@import "carousel.less";
 @import "../../../media/jui/less/hero-unit.less";
 
 // Utility classes
 @import "../../../media/jui/less/utilities.less";
 
+/*
 // RESPONSIVE CLASSES
 // ------------------
 
@@ -68,6 +69,7 @@
 
 // Large desktops
 @import "../../../media/jui/less/responsive-1200px-min.less";
+*/
 
 
 // RESPONSIVE NAVBAR
@@ -85,11 +87,68 @@
 // Icon Font
 @import "icomoon.less";
 
+//Gradients
+.gradientHorizontal(@color1, @color2) {
+	background: mix(@color1, @color2);
+	background: -moz-linear-gradient(left,  @color1 0%, @color2 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@color1), color-stop(100%,@color2));
+	background: -webkit-linear-gradient(left,  @color1 0%,@color2 100%);
+	background: -o-linear-gradient(left,  @color1 0%,@color2 100%);
+	background: -ms-linear-gradient(left,  @color1 0%,@color2 100%);
+	background: linear-gradient(to right,  @color1 0%,@color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ffffff',GradientType=1 );
+}
+.gradientVertical(@color1, @color2) {
+	background: mix(@color1, @color2);
+	background: -moz-linear-gradient(top,  @color1 0%, @color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@color1), color-stop(100%,@color2));
+	background: -webkit-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: -o-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: -ms-linear-gradient(top,  @color1 0%,@color2 100%);
+	background: linear-gradient(to bottom,  @color1 0%,@color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#ffffff',GradientType=1 );
+}
+
+.gradientRadial(@color1, @color2, @x: 50%, @y: 50%) {
+	background: mix(@color1, @color2);
+	background: -moz-radial-gradient(@x @y, ellipse cover,  @color1 0%, @color2 100%);
+	background: -webkit-gradient(radial, @x @y center, 0px, center center, 100%, color-stop(0%,@color1), color-stop(100%,@color2));
+	background: -webkit-radial-gradient(@x @y, ellipse cover,  @color1 0%,@color2 100%);
+	background: -o-radial-gradient(@x @y, ellipse cover,  @color1 0%,@color2 100%);
+	background: -ms-radial-gradient(@x @y, ellipse cover,  @color1 0%,@color2 100%);
+	background: radial-gradient(ellipse at @x @y,  @color1 0%,@color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#293967', endColorstr='#2c539e',GradientType=1 );
+}
+.gradientRadialLighten(@color1, @color2, @x: 50%, @y: 50%, @lp) {
+	background: mix(@color1, @color2);
+	background: -moz-radial-gradient(@x @y, ellipse cover,  lighten(@color1, @lp) 0%, lighten(@color2, @lp) 100%);
+	background: -webkit-gradient(radial, @x @y center, 0px, center center, 100%, color-stop(0%,lighten(@color1, @lp)), color-stop(100%,lighten(@color2, @lp)));
+	background: -webkit-radial-gradient(@x @y, ellipse cover,  lighten(@color1, @lp) 0%,lighten(@color2, @lp) 100%);
+	background: -o-radial-gradient(@x @y, ellipse cover,  lighten(@color1, @lp) 0%,lighten(@color2, @lp) 100%);
+	background: -ms-radial-gradient(@x @y, ellipse cover,  lighten(@color1, @lp) 0%,lighten(@color2, @lp) 100%);
+	background: radial-gradient(ellipse at @x @y,  lighten(@color1, @lp) 0%,lighten(@color2, @lp) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#293967', endColorstr='#2c539e',GradientType=1 );
+}
+.gradientRadialDarken(@color1, @color2, @x: 50%, @y: 50%, @dp) {
+	background: mix(@color1, @color2);
+	background: -moz-radial-gradient(@x @y, ellipse cover,  darken(@color1, @dp) 0%, darken(@color2, @dp) 100%);
+	background: -webkit-gradient(radial, @x @y center, 0px, center center, 100%, color-stop(0%,darken(@color1, @dp)), color-stop(100%,darken(@color2, @dp)));
+	background: -webkit-radial-gradient(@x @y, ellipse cover,  darken(@color1, @dp) 0%,darken(@color2, @dp) 100%);
+	background: -o-radial-gradient(@x @y, ellipse cover,  darken(@color1, @dp) 0%,darken(@color2, @dp) 100%);
+	background: -ms-radial-gradient(@x @y, ellipse cover,  darken(@color1, @dp) 0%,darken(@color2, @dp) 100%);
+	background: radial-gradient(ellipse at @x @y,  darken(@color1, @dp) 0%,darken(@color2, @dp) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#293967', endColorstr='#2c539e',GradientType=1 );
+}
+
+/*Site Default Font */
+html * {
+	font-family: @mainFont !important;
+}
+
 /* Site Body Styles */
 body.site{
-	border-top:3px solid #0088cc;
-	padding: 20px;
-	background-color: #f4f6f7;
+	border-top:5px solid #006a34;
+	background-color: @white;
 }
 body.site.fluid{
 	background-color: #ffffff;
@@ -540,4 +599,241 @@ code {
 /*Search filter*/
 #filter-search {
 	vertical-align: top;
+}
+
+#navigation {
+	background: #5676b6;
+	background: -moz-linear-gradient(top, darken(#5676b6, 5%) 0%, darken(#4c69a3, 5%) 5%, darken(#445f94, 5%) 32%, darken(#394e88, 5%) 65%, darken(#374a86, 5%) 76%, darken(#374a86, 5%) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,darken(#5676b6, 5%)), color-stop(5%,darken(#4c69a3, 5%)), color-stop(32%,darken(#445f94, 5%)), color-stop(65%,darken(#394e88, 5%)), color-stop(76%,darken(#374a86, 5%)), color-stop(100%,darken(#374a86, 5%)));
+	background: -webkit-linear-gradient(top, darken(#5676b6, 5%) 0%,darken(#4c69a3, 5%) 5%,darken(#445f94, 5%) 32%,darken(#394e88, 5%) 65%,darken(#374a86, 5%) 76%,darken(#374a86, 5%) 100%);
+	background: -o-linear-gradient(top, darken(#5676b6, 5%) 0%,darken(#4c69a3, 5%) 5%,darken(#445f94, 5%) 32%,darken(#394e88, 5%) 65%,darken(#374a86, 5%) 76%,darken(#374a86, 5%) 100%);
+	background: -ms-linear-gradient(top, darken(#5676b6, 5%) 0%,darken(#4c69a3, 5%) 5%,darken(#445f94, 5%) 32%,darken(#394e88, 5%) 65%,darken(#374a86, 5%) 76%,darken(#374a86, 5%) 100%);
+	background: linear-gradient(to bottom, darken(#5676b6, 5%) 0%,darken(#4c69a3, 5%) 5%,darken(#445f94, 5%) 32%,darken(#394e88, 5%) 65%,darken(#374a86, 5%) 76%,darken(#374a86, 5%) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5676b6', endColorstr='#374a86',GradientType=0 );
+
+	.container {
+		background: #5676b6;
+		background: -moz-linear-gradient(top, #5676b6 0%, #4c69a3 5%, #445f94 32%, #394e88 65%, #374a86 76%, #374a86 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5676b6), color-stop(5%,#4c69a3), color-stop(32%,#445f94), color-stop(65%,#394e88), color-stop(76%,#374a86), color-stop(100%,#374a86));
+		background: -webkit-linear-gradient(top, #5676b6 0%,#4c69a3 5%,#445f94 32%,#394e88 65%,#374a86 76%,#374a86 100%);
+		background: -o-linear-gradient(top, #5676b6 0%,#4c69a3 5%,#445f94 32%,#394e88 65%,#374a86 76%,#374a86 100%);
+		background: -ms-linear-gradient(top, #5676b6 0%,#4c69a3 5%,#445f94 32%,#394e88 65%,#374a86 76%,#374a86 100%);
+		background: linear-gradient(to bottom, #5676b6 0%,#4c69a3 5%,#445f94 32%,#394e88 65%,#374a86 76%,#374a86 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5676b6', endColorstr='#374a86',GradientType=0 );
+	}
+}
+
+/*Header - positions: logo, position-0*/
+.header {
+	margin: 20px 0 15px;
+}
+.header-search {
+	ul {
+		float: right;
+		li {
+			display: inline-block;
+			font-size: 12px;
+			font-weight: 400;
+			padding: 0 5px;
+			border-left: 1px solid @greyText;
+			a {
+				color: @greyText;
+				
+				&:hover {
+					background: none;
+				}
+			}
+		}
+		li:first-of-type {
+			border: none;
+		}
+	}
+	.search {
+		float: right;
+		
+		form {
+			input {
+				position: relative;
+				margin-left: 15px;
+				right: -5px;
+				width: 160px;
+				font-size: 12px;
+				font-weight: 300;
+				padding: 0 5px;
+				border: 1px solid @greySearch;
+				border-radius: 0;
+			}
+			button {
+				padding: 0;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			.btn-primary {
+				margin: 0;
+				border: 1px solid @greySearch;
+				border-radius: 0;
+				.buttonBackground(@greySearch, @greySearch);
+				height: 20px;
+				width: 20px;
+			}
+		}
+	}
+}
+
+/*positions - banner*/
+#banner {
+	background-color: darken(@darkBlue, 4%);
+	background-image: url("../images/BGwindmillsDark.png");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 1199px 379px;
+	
+	> .container {
+		width: 960px;
+		background-image: url("../images/BGwindmills.png");
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: 1199px 379px;
+	}
+}
+
+/*positions - home-content*/
+
+#content-container {
+	background-color: #f8f8f8;
+	> .container {
+		padding:0 10px;
+		background-color: #fff;
+	}
+
+
+	#home-content {
+		.moduletable:first-child {
+			.gradientHorizontal(#ffffff, #fafafa);
+		}
+		.moduletable:nth-child(2) {
+			background-color: white;
+		}
+		.moduletable:nth-child(3) {
+			.gradientHorizontal(#fafafa, #ffffff);
+		}
+		.moduletable {
+			padding: 25px 0;
+			.custom {
+				padding: 20px;
+				text-align: center;
+			
+				h3 {
+					margin: 0 0 12px;
+					text-transform: uppercase;
+					color: @btrGreen;
+					font-size: 22px;
+					font-weight: bold;
+					line-height: normal;
+				}
+				p {
+					margin: 0;
+					color: @greyText;
+					font-size: 14px;
+					font-weight: 300;
+					line-height: 22px;
+				}
+				a {
+					text-transform: uppercase;
+					color: @white;
+					text-shadow: 2px 2px 2px #000;
+				}
+				.btn-custom {
+					margin-top: 20px;
+					padding: 10px 20px;
+					.buttonBackground(#3a5f97, #2f5188);
+				}
+				.btn:hover {
+					.buttonBackground(lighten(#3a5f97, 15%), lighten(#2f5188, 15%));
+				}
+			}
+		}
+	}
+}
+
+/*positions - footer*/
+.footer {
+	.gradientRadialDarken(@blueGradientDark, @blueGradientLight, 50%, 100%, 2%);
+
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+		.gradientRadialLighten(@blueGradientDark, @blueGradientLight, 50%, 100%, 3%);
+		
+		.row-fluid {
+			.moduletable {
+				.custom {
+					padding:0 10px;
+					p {
+						color: @blueFooterText;
+						padding-top: 10px;
+					}
+					a {
+						color: @blueFooterText;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*positions - sub-content*/
+#sub-footer {
+	.gradientRadialDarken(@blueGradientDark, @blueGradientLight, 50%, 0%, 5%);
+
+	.container {
+	/*
+	padding-left: 25px;
+		padding-right: 25px;
+*/
+		padding: 10px 10px 50px 10px;
+		.gradientRadial(@blueGradientDark, @blueGradientLight, 50%, 0%);
+
+		#sub-content {
+			.moduletable {
+				padding-right: 10px;
+				
+				.custom {
+					padding:0 10px;
+					
+					h4, h5, p {
+						color: @white;
+					}
+					h4, p, a {
+						font-weight: 100;
+					}
+					h4 {
+						text-transform: uppercase;
+						font-size: 14px;
+					}
+					h5 {
+						font-size: 12px;
+						font-weight: bold;
+						margin: 0 35px 0 0;
+						padding-top: 10px;
+						border-top: 1px solid #a0c5f9;
+					}
+					a {
+						color: @blueFooterText;
+						
+						&:hover {
+							color: lighten(@blueFooterText, 10%);
+						}
+					}
+					p {
+						font-size: 12px;
+						line-height: 20px;
+					}
+					strong {
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
 }

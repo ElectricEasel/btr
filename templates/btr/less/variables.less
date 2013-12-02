@@ -16,6 +16,8 @@
 @grayLight:             #999;
 @grayLighter:           #eee;
 @white:                 #fff;
+@greyText:				#3d3d3d;
+@greySearch:			#8d8d8d;
 
 
 // Accent colors
@@ -28,6 +30,11 @@
 @orange:                #f89406;
 @pink:                  #c3325f;
 @purple:                #7a43b6;
+@btrGreen:				#006a34;
+@blueFooterText:		#a0c5f9;
+@darkBlue:				#293967;
+@blueGradientDark:		@darkBlue;
+@blueGradientLight:		lighten(@darkBlue, 20%);
 
 
 // Scaffolding
@@ -47,6 +54,7 @@
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@mainFont:				Helvetica, sans-serif;
 
 // > Joomla JUI
 @baseFontSize:          13px;
@@ -75,6 +83,7 @@
 @paddingLarge:          11px 19px; // 44px
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           0 6px;   // 22px
+@carouselImage:			120px;
 
 @baseBorderRadius:      4px;
 @borderRadiusLarge:     6px;
@@ -192,8 +201,8 @@
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      @gray;
-@navbarLinkColor:                 @gray;
-@navbarLinkColorHover:            @grayDark;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            lighten(@green, 25%);
 @navbarLinkColorActive:           @gray;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
