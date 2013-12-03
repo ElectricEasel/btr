@@ -7093,10 +7093,7 @@ code {
 #sidebar .sidebar-nav .moduletable ul .active a {
   color: #123395;
 }
-#sidebar .sidebar-nav .moduletable ul li:nth-child(5) {
-  border-top: 2px solid #8d8d8d;
-}
-#sidebar .sidebar-nav .moduletable ul li:nth-child(5) a {
+#sidebar .sidebar-nav .moduletable ul li:last-child a {
   padding-bottom: 20px;
 }
 /*positions - footer*/
