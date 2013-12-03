@@ -138,6 +138,13 @@ else
 			<jdoc:include type="modules" name="banner" style="xhtml" />
 		</div>
 	</div>
+	<?php if($this->countModules('banner-short')) : ?>
+	<div id="banner-short">
+		<div class="container">
+			<jdoc:include type="modules" name="banner-short" style="xhtml" />
+		</div>
+	</div>
+	<?php endif; ?>
 	<div id="content-container">
 		<div class="container">
 			<div class="row-fluid">
@@ -160,6 +167,9 @@ else
 						<jdoc:include type="modules" name="home-content" style="xhtml" />
 					</div>
 					<?php endif; ?>
+					<div id="main-content" class="row-fluid">
+						<jdoc:include type="modules" name="main-content" style="xhtml" />
+					</div>
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
 				</main>
