@@ -808,6 +808,21 @@ code {
 			line-height: 24px;
 			margin-top: 0;
 		}
+		h5 {
+			color: @greyTextDark;
+			font-size: 16px;
+			line-height: 22px;
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		h6 {
+			background: @greyBG;
+			color: @blueBodyText;
+			font-size: 16px;
+			line-height: 22px;
+			padding: 5px 10px;
+			margin-top: 25px;
+		}
 		.page-header {
 			border: none;
 			margin: 20px 0 20px;
@@ -850,6 +865,13 @@ code {
 					background: @greyBG;
 					padding: 5px 0 5px 20px;
 				}
+			}
+		}
+		.bg {
+			background: @greyBG;
+		
+			img {
+				padding: 24px;
 			}
 		}
 	}
@@ -900,7 +922,7 @@ code {
 				}
 				.active {
 					a {
-						color: @blueBodyText;
+						color: lighten(@blueBodyText, 5%);
 					}
 				}
 				li:last-child {
