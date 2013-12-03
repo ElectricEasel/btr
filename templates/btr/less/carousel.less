@@ -40,9 +40,9 @@
   	  .graphic {
   	  	margin-right: 80px;
 	    img {
-	    	padding-left: @carouselImage;
+	      padding-left: @carouselImage;
 	    }
-  	  }
+	  }
   }
 
   > .next,
@@ -150,13 +150,19 @@
 // Caption for text below images
 // -----------------------------
 
+
+#banner {
+  .container {
+	padding-right: 20px;
+  }
+}
 .carousel-caption {
   position: absolute;
   bottom: 0;
   top: 0;
   left: 460px;
   padding: 25px;
-  margin: 0 20px 0 80px;
+  margin: 0 0px 0 80px;
   background: @grayDark;
   background: rgba(0,0,0,.64);
   text-align: center;

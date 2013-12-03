@@ -26,8 +26,10 @@
 	</files>
 	<positions>
 		<position>banner</position>
+		<position>banner-short</position>
 		<position>debug</position>
 		<position>home-content</position>
+		<position>main-content</position>
 		<position>sub-content</position>
 		<position>logo</position>
 		<position>position-0</position>
