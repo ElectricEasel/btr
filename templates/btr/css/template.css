@@ -7005,6 +7005,21 @@ code {
   line-height: 24px;
   margin-top: 0;
 }
+#content .item-page h5 {
+  color: #505050;
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+#content .item-page h6 {
+  background: #f8f8f8;
+  color: #123395;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 5px 10px;
+  margin-top: 25px;
+}
 #content .item-page .page-header {
   border: none;
   margin: 20px 0 20px;
@@ -7044,6 +7059,12 @@ code {
 #content .item-page .span12 ul li:nth-child(even) {
   background: #f8f8f8;
   padding: 5px 0 5px 20px;
+}
+#content .item-page .bg {
+  background: #f8f8f8;
+}
+#content .item-page .bg img {
+  padding: 24px;
 }
 /*positions - position-8*/
 #sidebar {
@@ -7091,7 +7112,7 @@ code {
   padding-top: 15px;
 }
 #sidebar .sidebar-nav .moduletable ul .active a {
-  color: #123395;
+  color: #153bac;
 }
 #sidebar .sidebar-nav .moduletable ul li:last-child a {
   padding-bottom: 20px;
