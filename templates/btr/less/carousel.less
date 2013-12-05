@@ -39,8 +39,12 @@
   	left: 0;
   	  .graphic {
   	  	margin-right: 80px;
+  	  	
 	    img {
 	      padding-left: @carouselImage;
+	      padding-right: 40px;
+	      background-image: url("../images/imageShadow.png");
+	      background-position: 35px 0;
 	    }
 	  }
   }
@@ -90,7 +94,7 @@
   text-align: center;
   
   img {
-	  opacity: 0.23;
+	  opacity: 0.30;
 	  
 	  &:hover {
 		  opacity: 0.65;
@@ -141,8 +145,7 @@
     box-shadow: 1px 2px 2px rgba(0,0,0,.65) inset;
   }
   .active {
-    background-color: #ccc;
-    background-color: rgba(255,255,255,.25);
+    background-color: #4e7a1f;
     box-shadow: 1px 2px 2px rgba(0,0,0,.85) inset;
   }
 }
