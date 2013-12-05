@@ -630,6 +630,14 @@ code {
 	}
 }
 
+/*custom classes*/
+.bg {
+	background: @greyBG;
+}
+.slant {
+	font-style: italic;
+}
+
 /*Header - positions: logo, position-0*/
 .header {
 	margin: 20px 0 15px;
@@ -689,15 +697,15 @@ code {
 
 /*positions - banner*/
 #banner {
-	background-color: darken(@darkBlue, 4%);
-	background-image: url("../images/BGwindmillsDark.png");
+	background-color: darken(@darkBlue, 1%);
+	background-image: url("../images/BGDark.png");
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 1199px 379px;
 	
 	> .container {
 		/* width: 960px; */
-		background-image: url("../images/BGwindmills.png");
+		background-image: url("../images/BG.png");
 		background-repeat: no-repeat;
 		background-position: center top;
 		background-size: 1199px 379px;
@@ -707,8 +715,8 @@ code {
 /*positions - banner-short*/
 #banner-short {
 	height: 122px;
-	background-color: @darkBlue;
-	background-image: url("../images/BGwindmillsShortDark.png");
+	background-color: darken(@darkBlue, 1%);
+	background-image: url("../images/BGShortDark.png");
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 1200px 122px;
@@ -716,15 +724,15 @@ code {
 	> .container {
 		width: 960px;
 		height: 122px;
-		background-image: url("../images/BGwindmillsShort.png");
+		background-image: url("../images/BGShort.png");
 		background-repeat: no-repeat;
 		background-position: center top;
 		background-size: 1200px 122px;
 		
 		h3 {
-			color: @darkBlue;
+			color: @white;
 			font-size: 34px;
-			text-shadow: 0 1px 2px rgba(255,255,255,0.65);
+			text-shadow: 1px 1px 1px #000;
 			font-weight: 400;
 			padding: 30px 0 15px 45px;
 			box-shadow: 0 5px 8px rgba(0,0,0,0.10);
@@ -801,6 +809,15 @@ code {
 			font-weight: 400;
 			font-size: 14px;
 			line-height: 20px;
+			
+			a {
+				text-decoration: underline;
+				color: lighten(@blueBodyText, 5%);
+				
+				&:hover {
+					color: lighten(@blueBodyText, 30%);
+				}
+			}
 		}
 		h4 {
 			color: @greyTextDark;
@@ -816,12 +833,10 @@ code {
 			margin-bottom: 20px;
 		}
 		h6 {
-			background: @greyBG;
 			color: @blueBodyText;
 			font-size: 16px;
 			line-height: 22px;
 			padding: 5px 10px;
-			margin-top: 25px;
 		}
 		.page-header {
 			border: none;
@@ -842,8 +857,6 @@ code {
 			}
 		}
 		.span6 {
-			background: @greyBG;
-			text-align: center;
 			
 			img {
 				height: intrinsic;
@@ -851,27 +864,145 @@ code {
 		}
 		.span12 {
 			margin: 0;
-			ul {
-				margin: 15px 0;
-				li {
-					background: #fff;
-					color: @blueBodyText;
-					font-weight: bold;
-					font-size: 14px;
-					padding: 10px 0 10px 20px;
-					list-style-position: inside;
-				}
-				li:nth-child(even) {
-					background: @greyBG;
-					padding: 5px 0 5px 20px;
-				}
+		}
+		ul {
+			margin: 10px 0;
+			
+			li {
+				color: #000;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 20px;
+				padding: 2px 0;
+				list-style-position: inside;
 			}
 		}
-		.bg {
-			background: @greyBG;
-		
+		.ul-links {
+			li {
+				padding: 6px 0;
+				
+				a {
+					color: @blueBodyText;
+					font-weight: bold;
+					
+					&:hover {
+						color: lighten(@blueBodyText, 30%);
+					}
+				}
+
+			}
+		}
+		.alternating {
+			margin: 15px 0;
+			
+			li {
+				background: #fff;
+				color: @blueBodyText;
+				font-weight: bold;
+				font-size: 14px;
+				padding: 10px 0 10px 20px;
+				list-style-position: inside;
+			}
+			li:nth-child(even) {
+				background: @greyBG;
+				padding: 5px 0 5px 20px;
+			}
+		}
+		.top {
+			margin-top: 25px;
+		}
+		.pic {
+			text-align: center;
+			
 			img {
 				padding: 24px;
+			}
+		}
+		label {
+			cursor: default;
+		}
+		input[type="text"], input[type="tel"], input[type="email"], textarea {
+			border-radius: 5px;
+			border: 1px solid @greyBorder;
+			box-shadow: 0 2px 2px darken(@greyBorder, 5%) inset;
+		}
+		textarea {
+			width: 644px;
+			height: 140px;
+			resize: none;
+		}
+		input[type="text"], input[type="tel"], input[type="email"] {
+			width: 300px;
+		}
+		input[type="submit"] {
+			display: block;
+			margin: auto;
+			margin-top: 15px;
+			text-transform: uppercase;
+			padding: 10px 35px;
+		}
+		.btn-custom {
+			.buttonBackground(@blueGradientLight, @blueGradientDark);
+		}
+		.btn:hover {
+			.buttonBackground(lighten(@blueGradientLight, 15%), lighten(@blueGradientDark, 15%));
+		}
+	}
+}
+
+/*blog*/
+.blog {
+	h2 {
+		border: none;
+		margin: 20px 0 0;
+		padding: 0;
+		line-height: normal;
+		color: @btrGreen;
+		font-weight: 400;
+		font-size: 34px;
+	}
+	dl {
+		margin: 20px 0 12px;
+		
+		dd {
+			margin: 0;
+			text-transform: uppercase;
+			color: #878787;
+			font-size: 12px;
+			line-height: normal;
+			font-weight: bold;
+		}
+	}
+	.page-header {
+		border: none;
+		margin: 0 0 5px;
+		
+		h2 {
+			color: @blueBodyText;
+			font-size: 18px;
+			font-weight: bold;
+			
+			a {
+				color: @blueBodyText;
+			}
+		}
+	}
+	p {
+		color: #000;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+	}
+	div {
+		div {
+			> a {
+				color: @blueBodyText;
+				font-style: italic;
+				font-size: 14px;
+				
+				&:hover {
+					color: lighten(@blueBodyText, 30%);
+				}
 			}
 		}
 	}
@@ -885,7 +1016,7 @@ code {
 		.moduletable {
 			background-color: @greyBG;
 			border-right: 1px solid lighten(@greyBorder, 5%);
-			border-radius: 4px;
+			border-radius: 5px;
 			box-shadow: 0 1px 1px darken(@greyBorder, 10%);
 			
 			h3 {
@@ -897,8 +1028,8 @@ code {
 				font-weight: 400;
 				text-shadow: 1px 1px 0 #000;
 				text-transform: uppercase;
-				border-top-right-radius: 4px;
-				border-top-left-radius: 4px;
+				border-top-right-radius: 5px;
+				border-top-left-radius: 5px;
 				border-top: 1px solid lighten(@blueGradientLight, 30%);
 				border-right: 1px solid @blueGradientLight;
 			}
