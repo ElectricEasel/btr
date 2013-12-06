@@ -39,13 +39,14 @@ JHtml::_('behavior.framework');
 <?php if (!$params->get('show_intro')) : ?>
 	<?php echo $this->item->event->afterDisplayTitle; ?>
 <?php endif; ?>
-<?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
+<?php
 
-<?php if ($useDefList) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
-<?php  endif; ?>
+echo $this->item->event->beforeDisplayContent;
 
-<?php if ($params->get('show_readmore') && $this->item->readmore) :
+// Open article so we can append the readmore.
+echo '<p>' . strip_tags($this->item->introtext) . "...";
+
+if ($params->get('show_readmore') && $this->item->readmore) :
 	if ($params->get('access-view')) :
 		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
 	else :
@@ -56,9 +57,12 @@ JHtml::_('behavior.framework');
 		$returnURL = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
 		$link = new JUri($link1);
 		$link->setVar('return', base64_encode($returnURL));
-	endif; ?>
+	endif;
+	
+?>
 
-	<a href="<?php echo $link; ?>">
+	
+<a href="<?php echo $link; ?>">
 
 	<?php if (!$params->get('access-view')) :
 		echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
@@ -72,9 +76,12 @@ JHtml::_('behavior.framework');
 	else :
 		echo JText::_('COM_CONTENT_READ_MORE');
 		echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-	endif; ?>
+	endif;
+	
+// close the readmore an paragraph
+	?>
+</a></p>
 
-	</a>
 
 <?php endif; ?>
 
