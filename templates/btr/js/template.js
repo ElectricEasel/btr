@@ -41,5 +41,15 @@
 				$("label[for=" + $(this).attr('id') + "]").addClass('active btn-success');
 			}
 		});
+		/* $('#nav .menu .parent').hover( */
+		$('.navbar-inner .menu .parent').hover(
+			function(){
+				$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown(400);
+			},
+			function(){
+				$(this).find('ul:first').css({visibility: "hidden",display: "none"});
+			}
+		);
+
 	})
 })(jQuery);

@@ -44,7 +44,7 @@ JHtml::_('behavior.framework');
 echo $this->item->event->beforeDisplayContent;
 
 // Open article so we can append the readmore.
-echo '<p>' . strip_tags($this->item->introtext) . "...";
+echo '<p>' . strip_tags($this->item->introtext);
 
 if ($params->get('show_readmore') && $this->item->readmore) :
 	if ($params->get('access-view')) :
@@ -62,7 +62,7 @@ if ($params->get('show_readmore') && $this->item->readmore) :
 ?>
 
 	
-<a href="<?php echo $link; ?>">
+... <a href="<?php echo $link; ?>">
 
 	<?php if (!$params->get('access-view')) :
 		echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
