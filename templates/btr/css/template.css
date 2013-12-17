@@ -7158,6 +7158,9 @@ img.product {
 #content > .item-page .top {
   margin-top: 25px;
 }
+#content > .item-page .bottom {
+  margin-bottom: 25px;
+}
 #content > .item-page .pic {
   text-align: center;
 }
