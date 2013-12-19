@@ -7048,6 +7048,8 @@ img.product {
 /*article content*/
 #content {
   min-height: 680px;
+  /*temporary fix to seywave oem transceiver image*/
+
 }
 #content > .item-page {
   margin-bottom: 30px;
@@ -7194,6 +7196,12 @@ img.product {
   height: 9px;
   width: 10px;
   margin-right: 3px;
+}
+#content .row-3 img {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.09);
+  max-width: 129px;
+  height: 112px;
 }
 /*form (RSForm! Pro)*/
 #userForm .componentheading {
