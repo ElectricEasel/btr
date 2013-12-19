@@ -51,6 +51,7 @@
 // Utility classes
 @import "../../../media/jui/less/utilities.less";
 
+
 /*
 // RESPONSIVE CLASSES
 // ------------------
@@ -1263,7 +1264,7 @@ img.product {
 	.gradientRadialDarken(@blueGradientDark, @blueGradientLight, 50%, 0%, 5%);
 
 	.container {
-		padding: 10px 10px 50px 10px;
+		padding: 10px;
 		.gradientRadial(@blueGradientDark, @blueGradientLight, 50%, 0%);
 
 		#sub-content {
@@ -1273,13 +1274,13 @@ img.product {
 				.custom {
 					padding:0 10px;
 					
-					h4, h5, p {
+					h3, h4, h5, p {
 						color: @white;
 					}
-					h4, p, a {
+					h3, h4, p, a {
 						font-weight: 100;
 					}
-					h4 {
+					h3, h4 {
 						text-transform: uppercase;
 						font-size: 14px;
 					}
@@ -1305,7 +1306,56 @@ img.product {
 						text-transform: uppercase;
 					}
 				}
+			&.news-module {
+				.makeColumn(4);
+				padding: 0;
+				
+				h3, h4 {
+						text-transform: uppercase;
+						font-size: 14px;
+						color: @white;
+						font-weight: 100;
+				}
+			}
+			
 			}
 		}
 	}
+}
+.cctable {
+	thead {
+		td {
+			text-align: center;
+			font-weight: bold;
+			color: @white;
+			padding: 5px 0;
+			&.btr {
+				background-color: #2a438a;
+			}
+			&.ots {
+				background-color: @btrGreen;
+			}
+		}
+	}
+	tbody {
+		tr {
+			td {
+				width: 50%;
+				padding: 15px;
+				
+				&.cctable-heading {
+					width: 100%;
+					color: @blueBodyText;
+					font-weight: bold;
+					background-color: #e4e4e4;
+					padding: 5px 0;
+				}
+			}
+		}
+	}
+}
+.cctable, .cctable td {
+	border-collapse: collapse;
+	border: 1px solid #e4e4e4;
+	vertical-align: top;
 }

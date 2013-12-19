@@ -7431,7 +7431,7 @@ img.product {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#293967', endColorstr='#2c539e', GradientType=1);
 }
 #sub-footer .container {
-  padding: 10px 10px 50px 10px;
+  padding: 10px;
   background: #384d8b;
   background: -moz-radial-gradient(50% 0%, ellipse cover, #293967 0%, #4661b0 100%);
   background: -webkit-gradient(radial, 50% 0% center, 0px, center center, 100%, color-stop(0%, #293967), color-stop(100%, #4661b0));
@@ -7447,16 +7447,19 @@ img.product {
 #sub-footer .container #sub-content .moduletable .custom {
   padding: 0 10px;
 }
+#sub-footer .container #sub-content .moduletable .custom h3,
 #sub-footer .container #sub-content .moduletable .custom h4,
 #sub-footer .container #sub-content .moduletable .custom h5,
 #sub-footer .container #sub-content .moduletable .custom p {
   color: #ffffff;
 }
+#sub-footer .container #sub-content .moduletable .custom h3,
 #sub-footer .container #sub-content .moduletable .custom h4,
 #sub-footer .container #sub-content .moduletable .custom p,
 #sub-footer .container #sub-content .moduletable .custom a {
   font-weight: 100;
 }
+#sub-footer .container #sub-content .moduletable .custom h3,
 #sub-footer .container #sub-content .moduletable .custom h4 {
   text-transform: uppercase;
   font-size: 14px;
@@ -7480,4 +7483,46 @@ img.product {
 }
 #sub-footer .container #sub-content .moduletable .custom strong {
   text-transform: uppercase;
+}
+#sub-footer .container #sub-content .moduletable.news-module {
+  float: left;
+  margin-left: 20px;
+  width: 300px;
+  padding: 0;
+}
+#sub-footer .container #sub-content .moduletable.news-module h3,
+#sub-footer .container #sub-content .moduletable.news-module h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 100;
+}
+.cctable thead td {
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 0;
+}
+.cctable thead td.btr {
+  background-color: #2a438a;
+}
+.cctable thead td.ots {
+  background-color: #006a34;
+}
+.cctable tbody tr td {
+  width: 50%;
+  padding: 15px;
+}
+.cctable tbody tr td.cctable-heading {
+  width: 100%;
+  color: #123395;
+  font-weight: bold;
+  background-color: #e4e4e4;
+  padding: 5px 0;
+}
+.cctable,
+.cctable td {
+  border-collapse: collapse;
+  border: 1px solid #e4e4e4;
+  vertical-align: top;
 }
