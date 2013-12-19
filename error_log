@@ -5,3 +5,6 @@ Stack trace:
 #2 [internal function]: PlgSystemRedirect::handleError(Object(InvalidArgumentException))
 #3 {main}
   thrown in /home/eebetaco/public_html/btr/libraries/cms/application/site.php on line 508
+[19-Dec-2013 13:35:14 America/Chicago] PHP Strict Standards:  Declaration of XmapXmlDisplayer::printNode() should be compatible with XmapDisplayer::printNode(&$node) in /home/eebetaco/public_html/btr/components/com_xmap/views/xml/tmpl/default_class.php on line 234
+[19-Dec-2013 13:35:14 America/Chicago] PHP Strict Standards:  Declaration of XmapXmlDisplayer::startMenu() should be compatible with XmapDisplayer::startMenu(&$node) in /home/eebetaco/public_html/btr/components/com_xmap/views/xml/tmpl/default_class.php on line 234
+[19-Dec-2013 13:35:14 America/Chicago] PHP Strict Standards:  Declaration of XmapXmlDisplayer::endMenu() should be compatible with XmapDisplayer::endMenu(&$node) in /home/eebetaco/public_html/btr/components/com_xmap/views/xml/tmpl/default_class.php on line 234
