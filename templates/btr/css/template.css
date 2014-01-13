@@ -6426,7 +6426,7 @@ img.product {
   background-size: 1199px 379px;
 }
 #banner img {
-  max-width: 200%;
+  max-width: 540px;
 }
 #banner > .container {
   /* width: 960px; */
