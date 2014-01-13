@@ -6428,6 +6428,9 @@ img.product {
 #banner img {
   max-width: 540px;
 }
+#banner .stretch {
+  height: 423px;
+}
 #banner > .container {
   /* width: 960px; */
 
