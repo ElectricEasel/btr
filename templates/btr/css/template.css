@@ -6428,8 +6428,11 @@ img.product {
 #banner img {
   max-width: 540px;
 }
-#banner .stretch {
+#banner #innovation {
   height: 423px;
+}
+#banner #assembly {
+  height: 351px;
 }
 #banner > .container {
   /* width: 960px; */
@@ -6586,6 +6589,12 @@ img.product {
 #content-container #home-content .moduletable .custom .btn:hover:active,
 #content-container #home-content .moduletable .custom .btn:hover.active {
   background-color: #365c9b \9;
+}
+#content-container #home-content .moduletable .custom img {
+  height: 129px;
+}
+#content-container #home-content .moduletable .custom h3 {
+  min-height: 50px;
 }
 /*article content*/
 #content {
