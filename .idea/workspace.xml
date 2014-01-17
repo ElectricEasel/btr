@@ -4,6 +4,8 @@
     <list default="true" id="f44a9d54-c08b-4538-b0c9-3abcc1143b63" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/btr/images/gateway2.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/templates/btr/images/gateway2Shadow.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/btr/css/template.css" afterPath="$PROJECT_DIR$/templates/btr/css/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/btr/less/template.less" afterPath="$PROJECT_DIR$/templates/btr/less/template.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="btr.iws" />
@@ -26,10 +28,32 @@
     <favorites_list name="btr" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="template.less" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/btr/less/template.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="635" column="36" selection-start="18123" selection-end="18123" vertical-scroll-proportion="0.20525783" vertical-offset="9322" max-vertical-offset="18810">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/templates/btr/less/template.less" />
+      </list>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -132,6 +156,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="less" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="btr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -150,6 +196,19 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -210,6 +269,13 @@
     <entry file="file://$PROJECT_DIR$/templates/btr/images/home-seywave-wireless.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/btr/less/template.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="635" column="36" selection-start="18123" selection-end="18123" vertical-scroll-proportion="0.20525783" vertical-offset="9322" max-vertical-offset="18810">
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
