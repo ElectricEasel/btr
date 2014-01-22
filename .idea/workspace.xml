@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f44a9d54-c08b-4538-b0c9-3abcc1143b63" name="Default" comment="" />
+    <list default="true" id="f44a9d54-c08b-4538-b0c9-3abcc1143b63" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/btr/css/template.css" afterPath="$PROJECT_DIR$/templates/btr/css/template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/btr/less/template.less" afterPath="$PROJECT_DIR$/templates/btr/less/template.less" />
+    </list>
     <ignored path="btr.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +29,7 @@
       <file leaf-file-name="template.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/btr/less/template.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="911" column="20" selection-start="22648" selection-end="22648" vertical-scroll-proportion="0.084375" vertical-offset="13611" max-vertical-offset="19005">
+            <state line="924" column="37" selection-start="22890" selection-end="22890" vertical-scroll-proportion="0.3890625" vertical-offset="13611" max-vertical-offset="19005">
               <folding />
             </state>
           </provider>
@@ -237,7 +240,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="283" y="22" width="997" height="774" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -290,6 +293,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/btr/less/template.less">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="911" column="20" selection-start="22648" selection-end="22648" vertical-scroll-proportion="0.0" vertical-offset="13611" max-vertical-offset="19005">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/location.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/btr/less/template.less">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="641" column="17" selection-start="18202" selection-end="18202" vertical-scroll-proportion="0.0" vertical-offset="9322" max-vertical-offset="18900">
           <folding />
         </state>
@@ -319,7 +334,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/btr/less/template.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="911" column="20" selection-start="22648" selection-end="22648" vertical-scroll-proportion="0.084375" vertical-offset="13611" max-vertical-offset="19005">
+        <state line="924" column="37" selection-start="22890" selection-end="22890" vertical-scroll-proportion="0.3890625" vertical-offset="13611" max-vertical-offset="19005">
           <folding />
         </state>
       </provider>

@@ -6754,7 +6754,7 @@ img.product {
   width: 10px;
   margin-right: 3px;
 }
-#content .row-3 img {
+#content .blog.products > div:last-child img {
   border: 1px solid rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.09);
   max-width: 129px;
