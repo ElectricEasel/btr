@@ -6432,7 +6432,7 @@ img.product {
   height: 423px;
 }
 #banner #assembly2 {
-  height: 351px;
+  height: 378px;
 }
 #banner #slide-control {
   padding-top: 42px;
@@ -6759,6 +6759,13 @@ img.product {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.09);
   max-width: 129px;
   height: 112px;
+}
+#content #about {
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-height: 180px;
+  margin-top: -54px;
 }
 /*form (RSForm! Pro)*/
 #userForm .componentheading {
